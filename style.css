@@ -1,0 +1,155 @@
+/*Default style*/
+:root{
+    --white: #f9f9f9;
+    --darkred: darkred;
+    --gold: gold;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background-color: red;
+	font-family: cursive;
+}
+
+main {
+		padding: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Header */
+.header {
+	background-color: var(--darkred);
+	box-shadow: 1px 1px 5px 0px var(--gold);
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: 15px;
+}
+
+/* Logo */
+
+.logo {
+	margin-left: -35px;
+}
+
+/* Nav menu */
+.nav {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: var(--darkred);
+	overflow: hidden;
+}
+
+.menu a {
+	display: block;
+	padding: 30px;
+	color: var(--white);
+}
+
+.menu a:hover {
+	background-color: var(--gold);
+}
+
+.nav {
+	max-height: 0;
+	transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb {
+	cursor: pointer;
+	float: right;
+	padding: 50px 20px;
+}/* Style label tag */
+
+.hamb-line {
+	background: var(--white);
+	display: block;
+	height: 5px;
+	position: relative;
+	width: 27px;
+}/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+	background: var(--white);
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+
+.hamb-line::before {
+	top: 10px;
+}
+
+.hamb-line::after {
+	top: -10px;
+}
+
+.side-menu {
+	display: none;
+}/* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+	max-height: 11em;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+	background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+/* Responsiveness - Desktop */
+@media (min-width: 768px) {
+	.nav {
+		max-height: none;
+		top: 0;
+		position: relative;
+		float: right;
+		width: fit-content;
+		background-color: transparent;
+	}
+
+	.menu li {
+		float: left;
+	}
+
+	.menu a:hover {
+		background-color: transparent;
+		color: var(--gold);
+	}
+
+	.hamb {
+		display: none;
+	}
+
+
