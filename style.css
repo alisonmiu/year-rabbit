@@ -107,7 +107,7 @@ ul {
 .side-menu:checked ~ nav {
 	max-height: 10em;
     border: 1px solid gold;
-    margin-left: 35%;
+    margin-left: 30%;
     margin-top: -10%;
     padding: 10px;
 	position: absolute;
