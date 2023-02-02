@@ -105,7 +105,7 @@ ul {
 
 /* Toggle menu icon */
 .side-menu:checked ~ nav {
-	max-height:8em;
+	max-height:10em;
     border: 1px solid gold;
     margin-left: 30%;
     margin-top: -10%;
